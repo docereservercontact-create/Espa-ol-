@@ -1,101 +1,63 @@
 <!DOCTYPE html>
-<!-- Define el tipo de documento como HTML5 -->
-
 <html lang="es">
-<!-- Indica que el documento está en español -->
-
 <head>
 <meta charset="UTF-8">
-<!-- Define la codificación de caracteres para soportar acentos y símbolos -->
-
 <title>Plataforma de Evaluaciones</title>
-<!-- Título que aparece en la pestaña del navegador -->
 
 <style>
-/* Inicia los estilos CSS */
-
 body {
     font-family: Arial;
-    /* Define la fuente del texto */
-
     background: linear-gradient(135deg, #1e3c72, #2a5298);
-    /* Aplica un fondo degradado diagonal */
-
     margin: 0;
-    /* Elimina márgenes por defecto del navegador */
-
     color: white;
-    /* Color del texto */
-
     text-align: center;
-    /* Centra el texto */
+}
+
+/* LOGO */
+.logo {
+    width: 120px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    transition: 0.3s;
+}
+
+/* Efecto hover del logo */
+.logo:hover {
+    transform: scale(1.1);
 }
 
 h1 {
-    margin-top: 40px;
-    /* Agrega espacio arriba del título principal */
+    margin-top: 10px;
 }
 
 .subtitulo {
     margin-bottom: 30px;
-    /* Espacio debajo del subtítulo */
-
     opacity: 0.8;
-    /* Hace el texto ligeramente transparente */
 }
 
 .grid {
     display: grid;
-    /* Activa el sistema de grid (cuadrícula) */
-
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    /* Crea columnas responsivas que se ajustan automáticamente */
-
     gap: 20px;
-    /* Espacio entre elementos */
-
     padding: 30px;
-    /* Espacio interno */
-
     max-width: 900px;
-    /* Ancho máximo del contenedor */
-
     margin: auto;
-    /* Centra el contenedor horizontalmente */
 }
 
 .card {
     background: white;
-    /* Fondo blanco para las tarjetas */
-
     color: #2c3e50;
-    /* Color del texto dentro de la tarjeta */
-
     padding: 25px;
-    /* Espacio interno */
-
     border-radius: 15px;
-    /* Bordes redondeados */
-
     cursor: pointer;
-    /* Cambia el cursor al pasar el mouse */
-
     font-size: 18px;
-    /* Tamaño del texto */
-
     font-weight: bold;
-    /* Texto en negrita */
-
     transition: all 0.3s ease;
-    /* Animación suave al hacer hover */
 }
 
 .card:hover {
     transform: translateY(-8px) scale(1.03);
-    /* Eleva y agranda ligeramente la tarjeta */
-
     box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-    /* Agrega sombra para efecto de profundidad */
 }
 </style>
 
@@ -103,52 +65,29 @@ h1 {
 
 <body>
 
-<h1>🎓 Plataforma de Evaluaciones</h1>
-<!-- Título principal de la página -->
+<!-- LOGO -->
+<img src="Logo.png" class="logo">
 
+<h1>🎓 Plataforma de Evaluaciones</h1>
 <p class="subtitulo">Selecciona una materia</p>
-<!-- Subtítulo con clase para aplicar estilos -->
 
 <div class="grid">
-<!-- Contenedor que usa grid para organizar las tarjetas -->
 
     <div class="card" onclick="abrir('Biología/index.html')">🧬 Biología</div>
-    <!-- Tarjeta de Biología, al hacer clic redirige a su carpeta -->
-
     <div class="card" onclick="abrir('Español/index.html')">📘 Español</div>
-    <!-- Tarjeta de Español -->
-
     <div class="card" onclick="abrir('Filosofía/index.html')">🤔 Filosofía</div>
-    <!-- Tarjeta de Filosofía -->
-
     <div class="card" onclick="abrir('Física/index.html')">⚛️ Física</div>
-    <!-- Tarjeta de Física -->
-
     <div class="card" onclick="abrir('Geografía/index.html')">🌎 Geografía</div>
-    <!-- Tarjeta de Geografía -->
-
     <div class="card" onclick="abrir('Historia/index.html')">📜 Historia</div>
-    <!-- Tarjeta de Historia -->
-
     <div class="card" onclick="abrir('Literatura/index.html')">📖 Literatura</div>
-    <!-- Tarjeta de Literatura -->
-
     <div class="card" onclick="abrir('Matemáticas/index.html')">➗ Matemáticas</div>
-    <!-- Tarjeta de Matemáticas -->
-
     <div class="card" onclick="abrir('Química/index.html')">🧪 Química</div>
-    <!-- Tarjeta de Química -->
 
 </div>
 
 <script>
-/* Inicia código JavaScript */
-
 function abrir(ruta) {
-    // Define una función llamada "abrir" que recibe una ruta
-
     window.location.href = ruta;
-    // Cambia la página actual a la ruta indicada
 }
 </script>
 
